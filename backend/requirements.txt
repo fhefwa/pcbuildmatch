@@ -1,0 +1,22 @@
+# ============================================================
+# PCBuildMatch - dependencias de runtime del backend
+# Python 3.11+ (probado contra Python 3.15 en Windows)
+# ============================================================
+
+fastapi==0.162.0
+uvicorn==0.54.0
+sqlalchemy==2.1.8
+psycopg[binary]==3.3.8
+alembic==1.20.1
+pydantic==2.14.2
+pydantic-settings==2.16.2
+python-dotenv==1.2.4
+httpx==0.28.1
+
+# Proveedores de IA (completar claves en .env)
+openai==3.45.0
+anthropic==2.4.0
+
+# Nota: se usa uvicorn sin [standard] a propósito. watchfiles y PyYAML
+# todavía no publican wheels para Python 3.15 en Windows; --reload
+# funciona igual con el StatReload incluido en uvicorn.
